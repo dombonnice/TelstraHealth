@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>Telstra Health API</title>
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+    <link href="css/font-awesome.css" rel="stylesheet">
+    <link href="css/app.css" rel="stylesheet">
+    <script src="scripts/angular.min.js">
+    </script>
+    <script src="scripts/angular-ui-router.min.js">
+    </script>
+    <script src="scripts/jquery-1.10.2.min.js">
+    </script>
+    <script src="scripts/bootstrap.min.js">
+    </script>
+    <script src="scripts/ui-bootstrap-tpls.min.js">
+    </script>
+</head>
+
+<body>
+    <!--HEADER-->
+    <span class="spectrum-page-takeover" id="spectrum"></span>
+
+    <header>
+        <div class="container">
+            <a class="logo" href="/"><img alt="Telstra Health" src=
+            "images/logo-telstra-health.jpg"></a> <span class=
+            "portal-title">Developer</span>
+        </div>
+    </header>
+    <!--END HEADER-->
+
+
+    <div class="container">
+        <div class="title">
+            <h1 class="title-font">Want access to Telstra Health
+            API<span style="text-transform:capitalize">s</span>?</h1>
+
+
+            <p class="lead">Whether you're creating solutions for patients,
+            clinical or anyone in the health ecosystem, Telstra Health may soon
+            be able to offer you a range of APIs which could be used to
+            integrate with various industry solutions.</p>
+            <!--ENTER EMAIL-->
+
+
+            <h3 style="color:#084f31">Register your interest now:</h3>
+
+
+            <div class="email-capture">
+                <form class=
+                "css-form ng-pristine ng-valid-email ng-invalid ng-invalid-required"
+                id="form" name="form" novalidate="">
+                    <input class=
+                    "form-control ng-pristine ng-untouched ng-empty ng-valid-email ng-invalid ng-invalid-required"
+                    name="email" placeholder="Step 1: Type email address"
+                    required="" type="email">
+
+                    <div class="form-submit">
+                        <p class="visible-xs email-submit">Submit</p>
+                        <em aria-hidden="true"></em>
+                    </div>
+
+
+                    <div class="clearfix">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <form class=
+    "css-form ng-hide ng-pristine ng-invalid ng-invalid-required ng-valid-maxlength ng-valid-minlength"
+    id="form" name="form" novalidate="">
+        <div class="container">
+            <div class="row ng-hide">
+                <div class="col-xs-12">
+                    <span class="ng-binding"></span>
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="col col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                    <input class=
+                    "form-control ng-pristine ng-empty ng-invalid ng-invalid-required ng-valid-maxlength ng-touched"
+                    maxlength="10" name="firstName" placeholder="First Name"
+                    required="" type="text">
+                </div>
+
+
+                <div class="col col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                    <input class=
+                    "form-control ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required ng-valid-maxlength"
+                    maxlength="10" name="lastName" placeholder="Surname"
+                    required="" type="text">
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="col col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                    <input class=
+                    "form-control ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required ng-valid-maxlength"
+                    maxlength="20" name="jobTitle" placeholder="Job title"
+                    required="" type="text">
+                </div>
+
+
+                <div class="col col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                    <input class=
+                    "form-control ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required ng-valid-maxlength"
+                    maxlength="20" name="company" placeholder="Company"
+                    required="" type="text">
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="col col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                    <input class=
+                    "form-control ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required ng-valid-maxlength"
+                    maxlength="50" name="companyAddress" placeholder=
+                    "Company address" required="" type="text">
+                </div>
+
+
+                <div class="col col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                    <input class=
+                    "form-control ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required ng-valid-minlength ng-valid-maxlength"
+                    maxlength="12" name="phone" placeholder="Phone number"
+                    required="" type="text">
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="col col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                    <input class=
+                    "form-control ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required ng-valid-maxlength"
+                    maxlength="20" name="websiteAddress" placeholder=
+                    "Website address" required="" type="text">
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="col col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <textarea class=
+                    "txt-area form-control ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required"
+                    placeholder="Message" required="" rows="8"></textarea>
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="col col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <div class="left">
+                        <input class="chex" required="" type="checkbox">
+                    </div>
+
+
+                    <div class="right">
+                        By submitting your registration details, you agree that
+                        your participation in our Health API Platform trial is
+                        subject to our <a href="#">Terms of Use</a> for this
+                        project. You also acknowledge that the information you
+                        have provided will be treated in accordance with ou
+                        <a href="#">Privacy Statement</a>.
+                    </div>
+
+
+                    <div class="clearfix">
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class=
+                "col col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
+                    <a class="btn btn-primary" href="#">Get Involved</a>
+                </div>
+            </div>
+        </div>
+    </form>
+    <!--END EMAIL-->
+
+
+    <div class="container break">
+        <div class="mainContent text-center">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <h3>EXAMPLE API<span style=
+                "text-transform:capitalize">s</span></h3>
+
+
+                <p class="lead">Examples of APIs that we would like to test for
+                possible commercial release include:</p>
+
+
+                <ul class="tabs" style="margin:35px">
+                    <li class="tab-link btn btn-left current" data-tab="tab-1">
+                    Consumer</li>
+
+
+                    <li class="tab-link btn btn-left" data-tab="tab-2">
+                    Clinical</li>
+                </ul>
+
+
+                <div class="tab-content current" id="tab-1">
+                    <div class="col-md-3 col-sm-6 col-xs-12 card-body">
+                        <div class="card api">
+                            <img alt="" height="70" src="images/export.png"
+                            width="70">
+
+                            <div class="card-block">
+                                <h4 class="card-title">Export Patient Data
+                                (OSR)</h4>
+
+
+                                <p class="card-text">Export relevant patient
+                                measurements (OSR) to third party data analysis
+                                tools</p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-md-3 col-sm-6 col-xs-12 card-body">
+                        <div class="card api">
+                            <img alt="" height="70" src="images/sms.png" width=
+                            "70">
+
+                            <div class="card-block">
+                                <h4 class="card-title">Patient SMS</h4>
+
+
+                                <p class="card-text">Allows customers to send
+                                text messages to patients.</p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-md-3 col-sm-6 col-xs-12 card-body">
+                        <div class="card api">
+                            <img alt="" height="70" src="images/secure.png"
+                            width="70">
+
+                            <div class="card-block">
+                                <h4 class="card-title">Secure document
+                                transfer</h4>
+
+
+                                <p class="card-text">Securely send & receive
+                                letters, referrals, CDA docs and receive
+                                Pathology and Radiology results.</p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-md-3 col-sm-6 col-xs-12 card-body">
+                        <div class="card api">
+                            <img alt="" height="70" src=
+                            "images/appointments.png" width="70">
+
+                            <div class="card-block">
+                                <h4 class="card-title">Schedule Visit</h4>
+
+
+                                <p class="card-text">Schedule and record data
+                                about home care visits – home care mobile
+                                specific.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="tab-content" id="tab-2">
+                    <div class="col-md-3 col-sm-6 col-xs-12 card-body">
+                        <div class="card api">
+                            <img alt="" height="70" src=
+                            "images/pharmacy-profile-api.png" width="70">
+
+                            <div class="card-block">
+                                <h4 class="card-title">Pharmacy Profile
+                                API</h4>
+
+
+                                <p class="card-text">Send and receive
+                                medication profiles & messages from your
+                                pharmacy application.</p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-md-3 col-sm-6 col-xs-12 card-body">
+                        <div class="card api">
+                            <img alt="" height="70" src=
+                            "images/patients-flow-api.png" width="70">
+
+                            <div class="card-block">
+                                <h4 class="card-title">Patient Flow API</h4>
+
+
+                                <p class="card-text">Consume patient process
+                                infomration across inpatient, emergency and
+                                theartre.</p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-md-3 col-sm-6 col-xs-12 card-body">
+                        <div class="card api">
+                            <img alt="" height="70" src=
+                            "images/work-tracker-api.png" width="70">
+
+                            <div class="card-block">
+                                <h4 class="card-title">Work Tracker API</h4>
+
+
+                                <p class="card-text">Search, retrieve and
+                                maintain your organisation and it's
+                                workforce.</p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-md-3 col-sm-6 col-xs-12 card-body">
+                        <div class="card api">
+                            <img alt="" height="70" src=
+                            "images/customer-update-api.png" width="70">
+
+                            <div class="card-block">
+                                <h4 class="card-title">Customer Update API</h4>
+
+
+                                <p class="card-text">Modify or receive new
+                                customers from SAP. Auto updates your CRM.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container break">
+        <div class="mainContent text-center">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <h2>Join Australia's leading Health-Tech community</h2>
+
+
+                <p class="lead">We are currently investigating a solution to
+                roll-out access to a library of APIs with clear documentation
+                and guides available to help you. We are also planning on
+                pulling together a fantastic community of industry
+                participants. get access to our meetups, events, and 48hr
+                hackathons where you can create and collaborate on a high
+                impact health project with mentoring from Telstra Health
+                Team.</p>
+
+
+                <p class="lead" style="font-weight:bold">Some elements of the
+                community may include:</p>
+            </div>
+
+
+            <div class="row events">
+                <div class="col-md-3 col-xs-6">
+                    <div class="connector">
+                        <div class="icon-image"><img alt="" src=
+                        "images/icon-05.jpg">
+                        </div>
+
+
+                        <h3>Hackathons</h3>
+
+
+                        <div class="details">
+                            The best minds in Australian health come together
+                            to create apps with a difference
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-md-3 col-xs-6">
+                    <div class="connector">
+                        <div class="icon-image"><img alt="" src=
+                        "images/icon-06.jpg">
+                        </div>
+
+
+                        <h3>Events</h3>
+
+
+                        <div class="details">
+                            Network with clinical, business and patients at
+                            events across Australia
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-md-3 col-xs-6">
+                    <div class="connector">
+                        <div class="icon-image"><img alt="" src=
+                        "images/icon-07.jpg">
+                        </div>
+
+
+                        <h3>Meetups</h3>
+
+
+                        <div class="details">
+                            Meet and collaborate with other developers in your
+                            area. Share ideas, skills and build!
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-md-3 col-xs-6">
+                    <div class="connector">
+                        <div class="icon-image"><img alt="" src=
+                        "images/icon-08.jpg">
+                        </div>
+
+
+                        <h3>Support</h3>
+
+
+                        <div class="details">
+                            With the forum and blog updated daily with the
+                            latest from the community
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--START API-->
+    <!--END API-->
+    <!--END API-->
+
+
+    <div class="row getStarted ng-scope">
+        <div class="container">
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                <div class="left">
+                    <h1>I'm ready to get started</h1>
+
+
+                    <p class="lead">Register to be part of early-stage
+                    testing!</p>
+                </div>
+
+
+                <div class="right">
+                    <a class="btn btn-primary" href="#" id="createIssue">Get
+                    started</a>
+                </div>
+            </div>
+
+
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                <div class="left">
+                    <h1>I still have questions!</h1>
+
+
+                    <p class="lead">You have multiple options</p>
+                </div>
+
+
+                <div class="right">
+                    <a class="btn btn-secondary" href="#" id="createIssue">Get
+                    support</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                    <ul>
+                        <li class="heading">Get Started</li>
+
+
+                        <li>
+                            <a href="#">Docs</a>
+                        </li>
+
+
+                        <li>
+                            <a href="#">Guides</a>
+                        </li>
+
+
+                        <li>
+                            <a href="#">User Cases</a>
+                        </li>
+                    </ul>
+                </div>
+
+
+                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                    <ul>
+                        <li class="heading">Support</li>
+
+
+                        <li>
+                            <a href="#">Partners</a>
+                        </li>
+
+
+                        <li>
+                            <a href="#">Privacy Statement</a>
+                        </li>
+
+
+                        <li>
+                            <a href="">Terms Of Use</a>
+                        </li>
+                    </ul>
+                </div>
+
+
+                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4"><img alt=
+                "Telstra Health" src="images/footer-logo.jpg">
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script type="text/javascript">
+    $(document).ready(function(){
+
+    $('ul.tabs li').click(function(){
+        var tab_id = $(this).attr('data-tab');
+
+        $('ul.tabs li').removeClass('current');
+        $('.tab-content').removeClass('current');
+
+        $(this).addClass('current');
+        $("#"+tab_id).addClass('current');
+    })
+
+    })
+    </script> 
+    <script src="scripts/jquery-1.10.2.js">
+    </script> 
+    <script src="scripts/bootstrap.js">
+    </script> 
+    <script src="scripts/respond.js">
+    </script>
+</body>
+</html>
